@@ -9,7 +9,7 @@ You can install the operator manually in Openshift console using the Operator Hu
 Once the operator is installed you can create an instance of Kafka, as in the example below:
 
 
-```
+```yaml
 apiVersion: kafka.strimzi.io/v1beta2
 kind: Kafka
 metadata:
