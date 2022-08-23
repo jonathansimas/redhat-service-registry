@@ -1,4 +1,6 @@
-# Installing Service Registry with AMQ Streams and RHSSO in Openshift
+# Installing Service Registry with AMQ Streams and RHSSO in Openshift*
+
+*\*This is a resumed extract from the Service Registry documentation, so you can get it up and running faster. If you are having any issues, please read the full documentation at https://access.redhat.com/documentation/en-us/red_hat_integration/2022.q3/html/installing_and_deploying_service_registry_on_openshift/index*
 
 Service Registry is based on the Apicurio Registry open source community project. For details, see https://github.com/apicurio/apicurio-registry.
 
