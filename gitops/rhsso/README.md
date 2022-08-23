@@ -8,7 +8,7 @@ You can install the operator manually in Openshift console using the Operator Hu
 
 Once the operator is installed you can create an Keycloak instance, as in the example below:
 
-```
+```yaml
 apiVersion: keycloak.org/v1alpha1
 kind: Keycloak
 metadata:
@@ -28,7 +28,7 @@ spec:
 
 You can use the Red Hat SSO Operator to add a new Realm to Keycloak, or ` oc apply -f keycloak-realm.yaml` with the provided file in this repo:
 
-```
+```yaml
 apiVersion: keycloak.org/v1alpha1
 kind: KeycloakRealm
 metadata:
@@ -99,7 +99,7 @@ As a workaround in **non-production environments** you can expose an http endpoi
 
 Create a service targeting keycloak's port 8080:
 
-```
+```yaml
 apiVersion: v1
 kind: Service
 metadata:
@@ -121,7 +121,7 @@ spec:
 
 And then expose this service with an http route:
 
-```
+```yaml
 kind: Route
 apiVersion: route.openshift.io/v1
 metadata:
@@ -146,7 +146,7 @@ spec:
 
 If you're getting this error in Keycloak logs, you have RHSSO version 7.6 or higher and the message is clear, so you need to edit your standalone.xml to include the snipit below:
 
-```
+```xml
 <spi name="login-protocol">
   <provider name="openid-connect" enabled="true">
     <properties>
@@ -158,7 +158,7 @@ If you're getting this error in Keycloak logs, you have RHSSO version 7.6 or hig
 
 Alternatively, you can use jboss-cli to apply the following configuration:
 
-```
+```sh
 /subsystem=keycloak-server/spi=login-protocol:add
 /subsystem=keycloak-server/spi=login-protocol/provider=openid-connect:add(enabled=true)
 /subsystem=keycloak-server/spi=login-protocol/provider=openid-connect:write-attribute(name=properties.legacy-logout-redirect-uri,value=true)
