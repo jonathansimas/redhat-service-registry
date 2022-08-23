@@ -1,0 +1,17 @@
+kind: ApicurioRegistry
+apiVersion: registry.apicur.io/v1
+metadata:
+  name: example-apicurioregistry-kafkasql
+  namespace: iib-service-registry
+spec:
+  configuration:
+    kafkasql:
+      bootstrapServers: 'kafka-service.svc:9092'
+    persistence: kafkasql
+    security:
+      keycloak:
+        apiClientId: registry-client-api
+        realm: registry
+        uiClientId: registry-client-ui
+        url: >-
+          http://keycloak-registry.apps.my-cluster.com/auth
