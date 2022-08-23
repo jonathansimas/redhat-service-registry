@@ -1,6 +1,10 @@
 # Installing a Kafka instance to use with Service Registry
 
+
+### Installing the Red Hat Integration - AMQ Streams Operator
 You can install the operator manually in Openshift console using the Operator Hub or you can automate its creation with the provided yamls in this folder.
+
+### Creating an Kafka Instance
 
 Once the operator is installed you can create an instance of Kafka, as in the example below:
 
