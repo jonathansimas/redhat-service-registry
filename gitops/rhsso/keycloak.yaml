@@ -1,0 +1,11 @@
+apiVersion: keycloak.org/v1alpha1
+kind: Keycloak
+metadata:
+  labels:
+    app: sso
+  name: service-registry-keycloak
+  namespace: service-registry-rhsso
+spec:
+  externalAccess:
+    enabled: true
+  instances: 1

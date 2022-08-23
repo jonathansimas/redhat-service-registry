@@ -1,0 +1,1 @@
+# Installing a Red Hat SSO instance to use with Service Registry

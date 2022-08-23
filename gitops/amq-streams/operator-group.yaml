@@ -1,0 +1,8 @@
+apiVersion: operators.coreos.com/v1
+kind: OperatorGroup
+metadata:
+  name: op-group
+  namespace: service-registry-amq-streams
+spec:
+  targetNamespaces:
+  - service-registry-amq-streams
