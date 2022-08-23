@@ -1,6 +1,6 @@
-# Installing Service Registry with AMQ Streams and RHSSO in Openshift*
+# Installing Service Registry with AMQ Streams and RHSSO in Openshift
 
-*\*This is a resumed extract from the Service Registry documentation, so you can get it up and running faster. If you are having any issues, please read the full documentation at https://access.redhat.com/documentation/en-us/red_hat_integration/2022.q3/html/installing_and_deploying_service_registry_on_openshift/index*
+> *This is a resumed extract from the Service Registry documentation, so you can get it up and running faster. If you are having any issues, please read the full documentation at [access.redhat.com](https://access.redhat.com/documentation/en-us/red_hat_integration/2022.q3/html/installing_and_deploying_service_registry_on_openshift/index)*
 
 Service Registry is based on the Apicurio Registry open source community project. For details, see https://github.com/apicurio/apicurio-registry.
 
@@ -15,7 +15,7 @@ In Openshift >> Operator Hub select and install *Red Hat Integration - Service R
 In the Service Registry Operator click to create a new instance of APIcurio. You must define the kafka service url and some keycloak info, as in the example below:
 
 
-```
+```yaml
 kind: ApicurioRegistry
 apiVersion: registry.apicur.io/v1
 metadata:
